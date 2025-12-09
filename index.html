@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>im bored af</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navbar">
         <ul>
@@ -20,16 +21,16 @@
     <!-- Video container -->
     <div class="video-container">
         <video id="video-home" class="video-bg active" autoplay muted loop>
-            <source src="video/background.mp4" type="video/mp4">
+            <source src="./video/background.mp4" type="video/mp4">
         </video>
         <video id="video-about" class="video-bg" autoplay muted loop>
-            <source src="video/blue-lake-minecraft.1920x1080.mp4" type="video/mp4">
+            <source src="./video/blue-lake-minecraft.1920x1080.mp4" type="video/mp4">
         </video>
         <video id="video-contact" class="video-bg" autoplay muted loop>
-            <source src="video/minecraft-aquarium.3840x2160.mp4" type="video/mp4">
+            <source src="./video/minecraft-aquarium.3840x2160.mp4" type="video/mp4">
         </video>
         <video id="video-series" class="video-bg" autoplay muted loop>
-            <source src="video/series-background.mp4" type="video/mp4">
+            <source src="./video/series-background.mp4" type="video/mp4">
         </video>
 
         <div class="pixel-overlay"></div>
@@ -38,24 +39,28 @@
     <!-- Sections -->
     <div id="home" class="section active">
         <h1>My projects</h1><br>
-        <div>
-            <div class="gallery">
-                <div class="slide left">
-                    <p class="caption">Pterodactyl Panel</p>
-                    <a href="./projects html/dashboard.html"> <img src="./images/pterodactyl_add_node_create_button.05642c32.png" alt=""> </a>
-                </div>
-                <div class="slide right">
-                    <p class="caption">Caption 2</p>
-                    <img src="img2.jpg">
-                </div>
-                <div class="slide left">
-                    <p class="caption">Caption 3</p>
-                    <img src="img3.jpg">
-                </div>
-                <div class="slide right">
-                    <p class="caption">Caption 4</p>
-                    <img src="img4.jpg">
-                </div>
+
+        <div class="gallery">
+            <div class="slide left">
+                <p class="caption">Pterodactyl Panel</p>
+                <a href="./projects-html/dashboard.html">
+                    <img src="./images/pterodactyl_add_node_create_button.05642c32.png" alt="">
+                </a>
+            </div>
+
+            <div class="slide right">
+                <p class="caption">Caption 2</p>
+                <img src="./images/img2.jpg" alt="">
+            </div>
+
+            <div class="slide left">
+                <p class="caption">Caption 3</p>
+                <img src="./images/img3.jpg" alt="">
+            </div>
+
+            <div class="slide right">
+                <p class="caption">Caption 4</p>
+                <img src="./images/img4.jpg" alt="">
             </div>
         </div>
     </div>
@@ -71,42 +76,53 @@
     <!-- Series Section -->
     <div id="series" class="section">
         <div class="series-title">Series 1</div>
+
         <div class="video-grid">
             <a href="https://www.youtube.com/watch?v=XYNGkSvFT8c" class="video-item" data-title="The Apothecary Diaries">
-                <video src="video/series/series1.mp4" muted loop></video>
+                <video src="./video/series/series1.mp4" muted loop></video>
             </a>
+
             <a href="https://www.youtube.com/watch?v=KvMY1uzSC1E" class="video-item" data-title="Cyberpunk: Edgerunners">
-                <video src="video/series/series2.mp4" muted loop></video>
+                <video src="./video/series/series2.mp4" muted loop></video>
             </a>
+
             <a href="https://www.youtube.com/watch?v=LmM8xG6fUTk" class="video-item" data-title="Tower of God">
-                <video src="series3.mp4" muted loop></video>
+                <video src="./video/series/series3.mp4" muted loop></video>
             </a>
+
             <a href="#" class="video-item" data-title="Series 4">
-                <video src="series4.mp4" muted loop></video>
+                <video src="./video/series/series4.mp4" muted loop></video>
             </a>
+
             <a href="#" class="video-item" data-title="Series 5">
-                <video src="series5.mp4" muted loop></video>
+                <video src="./video/series/series5.mp4" muted loop></video>
             </a>
+
             <a href="#" class="video-item" data-title="Series 6">
-                <video src="series6.mp4" muted loop></video>
+                <video src="./video/series/series6.mp4" muted loop></video>
             </a>
+
             <a href="#" class="video-item" data-title="Series 7">
-                <video src="series7.mp4" muted loop></video>
+                <video src="./video/series/series7.mp4" muted loop></video>
             </a>
+
             <a href="#" class="video-item" data-title="Series 8">
-                <video src="series8.mp4" muted loop></video>
+                <video src="./video/series/series8.mp4" muted loop></video>
             </a>
+
             <a href="#" class="video-item" data-title="Series 9">
-                <video src="series9.mp4" muted loop></video>
+                <video src="./video/series/series9.mp4" muted loop></video>
             </a>
+
             <a href="#" class="video-item" data-title="Series 10">
-                <video src="series10.mp4" muted loop></video>
+                <video src="./video/series/series10.mp4" muted loop></video>
             </a>
         </div>
     </div>
 
+    <script src="./script.js"></script>
+
     <script>
-        // Pixelate video transition
         const sections = document.querySelectorAll('.section');
         const videos = {
             home: document.getElementById('video-home'),
@@ -114,6 +130,7 @@
             contact: document.getElementById('video-contact'),
             series: document.getElementById('video-series')
         };
+
         const overlay = document.querySelector('.pixel-overlay');
         let currentSection = 'home';
 
@@ -125,8 +142,10 @@
             setTimeout(() => {
                 videos[currentSection].classList.remove('active');
                 videos[newSection].classList.add('active');
+
                 sections.forEach(s => s.classList.remove('active'));
                 document.getElementById(newSection).classList.add('active');
+
                 overlay.classList.remove('active');
                 currentSection = newSection;
             }, 1000);
@@ -139,12 +158,9 @@
             });
         });
 
-        // Series grid: play hover video and update title
         const seriesTitle = document.querySelector('.series-title');
         document.querySelectorAll('.video-item').forEach(item => {
             const vid = item.querySelector('video');
-
-            // Show first frame
             vid.play();
             vid.pause();
 
@@ -152,11 +168,12 @@
                 vid.play();
                 seriesTitle.textContent = item.dataset.title;
             });
+
             item.addEventListener('mouseleave', () => {
                 vid.pause();
             });
         });
     </script>
-    <script src="script.js"></script>
+
 </body>
 </html>
